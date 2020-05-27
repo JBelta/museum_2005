@@ -22,4 +22,10 @@ class ExhibitTest < Minitest::Test
     assert_equal 0, @exhibit.cost
   end
 
+  def test_bobs_interest
+    @patron_1.add_interest("Dead Sea Scrolls")
+    @patron_1.add_interest("Gems and Minerals")
+
+    assert_equal ["Dead Sea Scrolls", "Gems and Minerals"], @patron_1.interest
+  end
 end
