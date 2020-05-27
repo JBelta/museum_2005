@@ -1,4 +1,5 @@
-class Museum
+require './lib/patron'
+class Museum < Patron
   attr_reader :name, :exhibits, :patrons
 
   def initialize(name)
@@ -22,5 +23,12 @@ class Museum
   # Iteration 3
   def admit(patron)
     @patrons << patron
+  end
+
+  def patrons_by_exhibit_interest
+    @exhibits.to_h do |exhibit|
+      #require 'pry'; binding.pry
+      [exhibit, @patrons.
+    end
   end
 end
