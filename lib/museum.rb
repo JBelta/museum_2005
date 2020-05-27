@@ -1,9 +1,11 @@
 class Museum
-  attr_reader :name, :exhibits
+  attr_reader :name, :exhibits, :patrons
 
   def initialize(name)
     @name = name
     @exhibits = []
+    #iteration 3
+    @patrons = []
   end
 
   def add_exhibit(exhibit)
@@ -16,5 +18,9 @@ class Museum
       patron.interest.any?(exhibit.name)
     end
     recomendations.flatten
+  end
+  # Iteration 3
+  def admit(patron)
+    @patrons << patron
   end
 end
