@@ -22,4 +22,8 @@ class MuseumTest < Minitest::Test
     @patron_1 = Patron.new("Bob", 20)
     @patron_2 = Patron.new("Sally", 20)
   end
+
+  def test_it_exists
+    assert_instance_of Museum, @dmns
+  end
 end
